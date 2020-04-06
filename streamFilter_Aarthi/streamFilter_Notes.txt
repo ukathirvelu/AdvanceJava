@@ -1,0 +1,10 @@
+Stream filter():
+1. It does not actually perform any filtering, but instead creates a new stream.
+2. Traversed the elements of the given input stream that match the given predicate.
+3. Returns the output as a new stream.
+
+Syntax:
+Stream<T> filter(Predicate<? super T> predicate)
+Where, 
+Stream is an interface 
+T is the type of the input to the predicate
