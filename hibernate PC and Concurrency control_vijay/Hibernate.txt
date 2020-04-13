@@ -1,0 +1,23 @@
+https://javabeginnerstutorial.com/hibernate/concurrency-control-with-hibernate-4/
+https://github.com/JBTAdmin/hibernate
+https://github.com/konrad-garus/HibernateConcurrencyDemo
+https://advjavajournal.wordpress.com/2016/07/21/concurrency-control-optimistic-and-pessimistic-locking/
+https://databasemanagement.fandom.com/wiki/Concurrency_Control
+https://docs.jboss.org/hibernate/core/4.3/manual/en-US/html/ch13.html
+
+https://www.baeldung.com/tomcat-deploy-war
+
+https://javabeginnerstutorial.com/hibernate/concurrency-control-with-hibernate-4/
+
+https://databasemanagement.fandom.com/wiki/Concurrency_Control
+
+persistence context
+https://aishwaryavaishno.wordpress.com/2013/06/07/hibernate-persistent-context-and-objects-lifecycle/
+https://docs.jboss.org/hibernate/orm/4.0/devguide/en-US/html/ch03.html
+
+https://www.baeldung.com/jpa-hibernate-persistence-context
+
+
+In Hibernate native APIs, the persistence context is defined as the org.hibernate.Session. 
+In JPA, the persistence context is defined by javax.persistence.EntityManager. 
+Much of the org.hibernate.Session and javax.persistence.EntityManager methods deal with moving entities between these states.
