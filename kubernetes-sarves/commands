@@ -1,0 +1,69 @@
+Commands
+
+kubectl get all
+
+Cloning the Git
+------------------
+
+git clone https://github.com/sarveswarant/demo.git
+
+Run Project
+------------
+mvn clean install
+
+cd target
+
+java -jar demo-0.0.1-SNAPSHOT.jar
+
+Create Docker Image and push it to registry
+-----------------------------------------
+
+mvn com.google.cloud.tools:jib-maven-plugin:build -Dimage=gcr.io/adroit-resolver-272315/cei-demo:v1
+
+set projet
+-----------
+
+gcloud config set project adroit-resolver-272315
+
+get Credentials
+-----------------
+
+gcloud container clusters get-credentials cei-sarves-cluster-1 --zone us-central1-c
+
+
+kubectl get pods
+
+kubectl get services
+
+Kubectl get deployments
+
+Check docker running
+-----------------------
+
+docker run -ti --rm -p 8080:8080 gcr.io/adroit-resolver-272315/cei-demo:v1
+
+Deploy to pods
+------------
+
+kubectl run cei-demo --image=gcr.io/adroit-resolver-272315/cei-demo:v1 --port=8080
+
+kubectl get pods
+
+kubectl get services
+
+Kubectl get deployments
+
+Create the Service
+-------------------
+
+kubectl expose deployment cei-demo --type=LoadBalancer --port=8080
+
+
+Scale
+-----------
+kubectl scale deployment cei-demo --replicas=3
+
+https://static.brandonpotter.com/kubernetes/DeploymentBuilder.html
+
+
+
