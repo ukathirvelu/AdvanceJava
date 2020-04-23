@@ -1,0 +1,6 @@
+org\kds\spring\jpa\domain\Employees.class
+org\kds\spring\jpa\repository\EmployeeRepository.class
+org\kds\spring\jpa\repository\EmployeeRepositoryCustom.class
+org\kds\spring\jpa\repository\EmployeeRepositoryImpl.class
+org\kds\spring\jpa\controller\EmployeeController.class
+org\kds\spring\jpa\JpaStoredProcSampleApplication.class

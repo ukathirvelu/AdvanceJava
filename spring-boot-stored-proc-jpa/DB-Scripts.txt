@@ -1,0 +1,38 @@
+https://medium.com/@kalpads/calling-stored-procedure-using-spring-jpa-ee37fa58ca2d
+
+CALL public.employee_insert(p_name => 'Arumugam'::text, p_employee_id => null);
+
+CREATE TABLE employees (
+  employee_id INTEGER NOT NULL,
+  first_name VARCHAR(50) NOT NULL,
+  last_name VARCHAR(50) NOT NULL,
+  address VARCHAR(100) NOT NULL,
+  PRIMARY KEY (employee_id)
+);
+
+insert into employees (employee_id,
+ first_name,
+ last_name, 
+ address) values (001,"Diane","Murphy","19,Quaker Ridge Rd,06801");
+
+insert into employees (employee_id,
+ first_name,
+ last_name, 
+ address) values (002,"Jeff","Firrelli","1000,Coney Island Ave,11230");
+
+
+insert into employees (employee_id,
+ first_name,
+ last_name, 
+ address) values (003,"Gerard","Bondur","2962,Dunedin CvGermantown,38138");
+
+insert into employees (employee_id,
+ first_name,
+ last_name, 
+ address) values (004,"Vanauf","George","1500,Vance Ave Memphis,38104");
+
+
+insert into employees (employee_id,
+ first_name,
+ last_name, 
+ address) values (005,"King","Tom","1577,Lobby Ave,38804");
