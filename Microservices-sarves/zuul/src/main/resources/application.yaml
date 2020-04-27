@@ -1,0 +1,28 @@
+zuul:
+  prefix: /api
+  routes:
+    customer-rest:
+      path: /customers/**
+      serviceId: CUSTOMER-REST
+    carrier-rest:
+      path: /carriers/**
+      serviceId: CARRIER-REST
+    load-rest:
+      path: /loads/**
+      serviceId: LOAD-REST
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8081/eureka/
+    instance:
+      hostname: localhost
+
+server:
+  port: 8080
+
+spring:
+  application:
+     name: zuul-service
