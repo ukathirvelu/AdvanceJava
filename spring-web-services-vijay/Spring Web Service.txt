@@ -1,0 +1,9 @@
+https://howtodoinjava.com/spring-boot/spring-boot-soap-webservice-example/
+
+https://www.javainuse.com/spring/springbootsoapwebservice
+
+https://www.w3schools.in/restful-web-services/types-of-web-services/
+
+https://www.programmergate.com/build-rest-web-service-using-spring-boot/
+
+https://www.youtube.com/watch?v=ceSqN3CWd14
