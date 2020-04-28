@@ -1,0 +1,38 @@
+<div class="container" style="margin-top: 10px;">
+    <button mat-raised-button color="primary" >Topic Details</button>
+</div>
+<div style="padding: 13px;"> 
+    <form [formGroup]="editTopicForm">
+        <div class="form-group">
+            <label>Trainings&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <select formControlName="trainingDetails" id="trainingDetails">
+                <option *ngFor="let trainingDetail of trainingDetails; let i = index" [value]="trainingDetails[i].id">
+                  {{trainingDetails[i].trainingName}}
+                </option>
+              </select>
+        </div>
+        <br>
+        <div class="form-group">
+            <label>Topic Name</label>
+            <input type="text" formControlName="topicName" placeholder="Topic Name" class="form-control" maxlength="20" required >
+           
+        </div>
+        <br>
+        <div class="form-group">
+            <label>Description &nbsp;</label>
+            <input type="text" formControlName="description" class="form-control" placeholder="description" maxlength="20" required >
+        </div>
+        <br>
+        <div class="form-group">
+            <label>Start Date &nbsp;&nbsp;&nbsp;</label>
+            <input type="date" formControlName="startDate" class="form-control"  placeholder="dd/mm/yyyy" required >
+        </div>
+        <br>
+        <div class="form-group">
+            <label>End Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="date" formControlName="endDate" class="form-control"  placeholder="dd/mm/yyyy" required >
+        </div>
+        <br>
+        <button type="submit" (click)="submitForm()" >Save</button>
+    </form>
+</div>

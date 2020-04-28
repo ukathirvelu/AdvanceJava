@@ -1,0 +1,34 @@
+<div>
+    <h1>Current topics</h1>
+    <table class="table table-striped">
+        <thead *ngIf= "trainingTopics.length">
+            <tr>
+                <!--<th>#</th> -->
+                <th>Topic Name</th>
+                <th>Description</th>
+                <th>Start Date</th>
+                <th>End Date</th><br>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let topic of trainingTopics">
+                <!--<td>{{topic.id}}</td> -->
+                <td>{{topic.topicName}}</td>
+                <td>{{topic.description}}</td>
+                <td>{{topic.startDate| date :'MM/dd/yyyy'}}</td>
+                <td>{{topic.endDate | date :'MM/dd/yyyy'}}</td><br>
+                <td>
+                    <button type="button" *ngIf= "topic" (click)="getByTopicDetailsId(topic.id)">Update</button> &nbsp;
+                    <button type="button" *ngIf= "topic" (click)="deleteTopic(topic.id)">Remove</button>
+                </td>
+                
+            </tr>
+        </tbody>
+    </table>
+    <div *ngIf= "!trainingTopics.length">
+        <p class="caption">There are no Topics at this moment...</p>
+    </div>
+
+    <button type="button" routerLink="/tracker-create-trainingtopic">Create new Topic</button>
+</div>

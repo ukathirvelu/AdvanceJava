@@ -1,0 +1,46 @@
+<h1 mat-dialog-title>Team Member :: <strong>{{action}}</strong></h1>
+<div mat-dialog-content>
+    <table *ngIf="action != 'Delete'; else elseTemplate">
+        <tr>
+            <td>
+                <mat-form-field  class="demo-full-width" hintLabel="Max 20 characters" appearance="fill">
+                    <mat-label>First Name</mat-label>  
+                    <input matInput [(ngModel)]="local_data.firstName" placeholder="First Name" required="true" 
+                    #firstName maxlength="20"> 
+                    <mat-hint align="end">{{firstName.value?.length || 0}}/20</mat-hint> 
+                </mat-form-field> 
+            </td>
+            <td>
+                <mat-form-field  class="demo-full-width" hintLabel="Max 10 characters" appearance="fill">
+                    <mat-label>Last Name</mat-label>  
+                    <input matInput [(ngModel)]="local_data.lastName" placeholder="Last Name" required #lastName maxlength="10">
+                    <mat-hint align="end">{{lastName.value?.length || 0}}/10</mat-hint>  
+                </mat-form-field> 
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <mat-form-field class="demo-full-width" hintLabel="Max 10 characters" appearance="fill">
+                    <mat-label>Phone Number</mat-label>  
+                    <input matInput [(ngModel)]="local_data.phone" placeholder="Phone Number" required #phone maxlength="10">  
+                    <mat-hint align="end">{{phone.value?.length || 0}}/10</mat-hint> 
+                </mat-form-field> 
+            </td>
+            <td>
+                <mat-form-field class="demo-full-width" appearance="fill">
+                    <mat-label>Email Address</mat-label>  
+                    <input matInput [(ngModel)]="local_data.email"  placeholder="Email Address" required>  
+                    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                </mat-form-field> 
+            </td>
+        </tr>
+    </table>
+
+  <ng-template #elseTemplate>
+    Sure to delete <b>{{local_data.id}}</b>?
+  </ng-template>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="doAction()">{{action}}</button>
+  <button mat-button (click)="closeDialog()" mat-flat-button color="warn">Cancel</button>
+</div>

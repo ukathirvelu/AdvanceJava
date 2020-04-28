@@ -1,0 +1,93 @@
+<div class="container" style="margin-top: 15px; text-align: center;">
+<button mat-raised-button style = "margin-right: 10%;" color="primary" routerLink="/tracker-team-members">Team Member</button>
+<button mat-raised-button style = "margin-right: 10%;" color= "primary" routerLink="/tracker-training-page">Training Page</button>
+<button mat-raised-button color= "primary" routerLink="/tracker-training-topic">Training Topic</button>
+
+<mat-accordion>
+    
+    <mat-card>
+        <mat-card-title>
+            Trainings this month
+        </mat-card-title>
+        <mat-card-content>
+            <table class="mat-card">
+                <th>
+                    <tr>Count of Team Members : <td><a href="tracker-team-members" class="stretched-link">{{countofTeammembers}}</a></td></tr>
+                    <tr>In Progress : <td> {{inProgressTrainings.length}}</td></tr>
+                    <tr>Completed Trainings : <td>{{completedTrainings.length}}</td></tr>
+                    <tr>Yet To Start : <td>{{yetToStartTrainings.length}}</td></tr>
+                    <tr>Total : <td>{{total}}</td></tr>
+                </th>
+            </table>
+        </mat-card-content>
+    </mat-card>
+    
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+            Ongoing trainings
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      
+      <table class="table table-hover">
+        <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Training Name</th>
+          <th scope="col">Topic</th>
+          <th scope="col">Start Date</th>
+          <th scope="col">End Date</th>
+          <th scope="col">Progress</th>
+          <th scope="col">No of Topics</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let ipt of inProgressTrainings; index as i">
+          <th scope="row">{{ i + 1 }}</th>
+          <td>{{ ipt.trainingName }}</td>
+          <td>{{ ipt.topic }}</td>
+          <td>{{ ipt.startDate }}</td>
+          <td>{{ ipt.endDate }}</td>
+          <td><mat-progress-bar value="{{ipt.progress}}"></mat-progress-bar>{{ ipt.progress | number:'2.1-2' }}%</td>
+          <td><a href="tracker-training-topic" class="stretched-link">{{ ipt.numberofTopics}}</a></td>
+        </tr>
+        </tbody>
+      </table>
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+            Upcoming trainings
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+    
+      <table class="table table-hover">
+        <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Training Name</th>
+          <th scope="col">Topic</th>
+          <th scope="col">Start Date</th>
+          <th scope="col">End Date</th>
+          <th scope="col">Progress</th>
+          <th scope="col">No of Topics</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let ipt of yetToStartTrainings; index as i">
+          <th scope="row">{{ i + 1 }}</th>
+          <td>{{ ipt.trainingName }}</td>
+          <td>{{ ipt.topic }}</td>
+          <td>{{ ipt.startDate }}</td>
+          <td>{{ ipt.endDate }}</td>
+          <td><mat-progress-bar value="{{ipt.progress}}"></mat-progress-bar>{{ ipt.progress }}%</td>
+          <td><a href="tracker-training-topic" class="stretched-link">{{ ipt.numberofTopics}}</a></td>
+        </tr>
+        </tbody>
+      </table>
+   
+    </mat-expansion-panel>
+  </mat-accordion>
+
+</div>

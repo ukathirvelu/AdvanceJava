@@ -1,0 +1,134 @@
+{
+  "teammembers": [
+    {
+      "action": "Add",
+      "firstName": "Kolli",
+      "lastName": "Vijaya kumar",
+      "phone": "7667521780",
+      "email": "kumar@cei.com",
+      "id": 1
+    },
+    {
+      "action": "Update",
+      "firstName": "Balu",
+      "lastName": "Ambati",
+      "phone": "9856235689",
+      "email": "amabti@cei.com",
+      "id": 2
+    },
+    {
+      "action": "Add",
+      "firstName": "Krishna",
+      "lastName": "Prasad",
+      "phone": "8795461236",
+      "email": "kp@cei.com",
+      "id": 3
+    },
+    {
+      "action": "Add",
+      "firstName": "Suresh",
+      "lastName": "b",
+      "phone": "9866523669",
+      "email": "b.suresh@cei.com",
+      "id": 4
+    },
+    {
+      "action": "Add",
+      "firstName": "Khadir",
+      "lastName": "M",
+      "phone": "8956232566",
+      "email": "vij@gmail.com",
+      "id": 5
+    }
+  ],
+  "trainingDetails": [
+    {
+      "id": 1,
+      "trainingName": "Java 8",
+      "topic": "Streams/Collections1",
+      "startDate": "2020-04-20",
+      "endDate": "2020-04-30"
+    },
+    {
+      "trainingName": "Angular",
+      "topic": "Forms",
+      "startDate": "2020-04-22",
+      "endDate": "2020-04-30",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "trainingName": "Devops",
+      "topic": "Install docker",
+      "startDate": "2020-04-28",
+      "endDate": "2020-06-21"
+    },
+    {
+      "trainingName": "Java8",
+      "topic": "Streams",
+      "startDate": "2020-04-01",
+      "endDate": "2020-04-02",
+      "id": 4
+    },
+    {
+      "trainingName": "Java8",
+      "topic": "forEach",
+      "startDate": "2020-04-06",
+      "endDate": "2020-04-07",
+      "id": 5
+    },
+    {
+      "trainingName": "Java8",
+      "topic": "Method references",
+      "startDate": "2020-03-25",
+      "endDate": "2020-03-26",
+      "id": 6
+    },
+    {
+      "trainingName": "Java 8",
+      "topic": "Lambda Expressions",
+      "startDate": "2020-03-25",
+      "endDate": "2020-03-26",
+      "id": 7
+    },
+    {
+      "trainingName": "Spring",
+      "topic": "Spring Web Flow",
+      "startDate": "2020-04-23",
+      "endDate": "2020-04-30",
+      "id": 8
+    },
+    {
+      "trainingName": "Spring",
+      "topic": "Spring Web Services",
+      "startDate": "2020-04-23",
+      "endDate": "2020-04-28",
+      "id": 9
+    },
+    {
+      "trainingName": "Devops",
+      "topic": "Understanding the Docker flow",
+      "startDate": "2020-05-01",
+      "endDate": "2020-05-08",
+      "id": 10
+    }
+  ],
+  "trainingTopics": [
+    {
+      "id": 4,
+      "topicName": "Rxjs",
+      "description": "Subjects",
+      "startDate": "2020-04-20",
+      "endDate": "2020-04-30",
+      "trainingDetails": "2"
+    },
+    {
+      "topicName": "Install docker",
+      "description": "Docker installations",
+      "startDate": "2020-04-08",
+      "endDate": "2020-04-21",
+      "trainingDetails": "3",
+      "id": 5
+    }
+  ]
+}

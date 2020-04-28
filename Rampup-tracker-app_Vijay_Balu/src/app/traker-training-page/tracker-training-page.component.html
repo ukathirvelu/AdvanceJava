@@ -1,0 +1,33 @@
+<div>
+    <h1> Current Trainings</h1>
+    <table class="table table-striped">
+        <thead *ngIf= "trainingDetails.length">
+            <tr>
+                <!--<th>#</th>-->
+                <th>Training Name</th>
+                <th>Topic</th>
+                <th>Start Date</th>
+                <th>End Date</th> <br>                            
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let trainingDetail of trainingDetails">
+                <td>{{trainingDetail.trainingName}}</td>
+                <td>{{trainingDetail.topic}}</td>
+                <td>{{trainingDetail.startDate| date :'MM/dd/yyyy'}}</td>
+                <td>{{trainingDetail.endDate | date :'MM/dd/yyyy'}}</td><br>
+                <td>
+                    <button type="button" *ngIf= "trainingDetail" (click)="getByTrainingDetailsId(trainingDetail.id)">Update</button> &nbsp;
+                    <button type="button" *ngIf= "trainingDetail" (click)="deleteTraining(trainingDetail.id)">Remove</button>
+                </td>
+                
+            </tr>
+        </tbody>
+    </table>
+    <div *ngIf= "!trainingDetails.length">
+        <p class="caption">There are no Trainings at this moment...</p>
+    </div>
+
+    <button type="button" routerLink="/tracker-create-trainingDetails">Create new Training</button>
+</div>
