@@ -1,0 +1,3 @@
+Every program has (at least) two purposes:
+1. the one for which it was written
+2. and another for which it wasn't.
